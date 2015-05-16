@@ -13,6 +13,7 @@
 		0A51D35F1ABBA1A20043E647 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A51D35E1ABBA1A20043E647 /* Images.xcassets */; };
 		0A51D3621ABBA1A20043E647 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A51D3601ABBA1A20043E647 /* LaunchScreen.xib */; };
 		0A51D36E1ABBA1A20043E647 /* RPN_CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A51D36D1ABBA1A20043E647 /* RPN_CalculatorTests.swift */; };
+		0A64B6141B07CBF8002689E3 /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A64B6131B07CBF8002689E3 /* CalculatorBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		0A51D3671ABBA1A20043E647 /* RPN CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RPN CalculatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A51D36C1ABBA1A20043E647 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A51D36D1ABBA1A20043E647 /* RPN_CalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPN_CalculatorTests.swift; sourceTree = "<group>"; };
+		0A64B6131B07CBF8002689E3 /* CalculatorBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		0A51D3541ABBA1A20043E647 /* RPN Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				0A64B6131B07CBF8002689E3 /* CalculatorBrain.swift */,
 				0A51D3571ABBA1A20043E647 /* AppDelegate.swift */,
 				0A51D3591ABBA1A20043E647 /* ViewController.swift */,
 				0A51D35B1ABBA1A20043E647 /* Main.storyboard */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A64B6141B07CBF8002689E3 /* CalculatorBrain.swift in Sources */,
 				0A51D35A1ABBA1A20043E647 /* ViewController.swift in Sources */,
 				0A51D3581ABBA1A20043E647 /* AppDelegate.swift in Sources */,
 			);

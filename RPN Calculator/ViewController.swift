@@ -8,10 +8,13 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
 
     var clearDigit = true
-
+    
+    var brain = CalculatorBrain()
+    
     @IBOutlet weak var display: UILabel!
     
     var displayValue: Double {
@@ -35,50 +38,31 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func binaryOperator(sender: UIButton) {
-        if displayValue != 0 {
-            operandStack.append(displayValue)
+    @IBAction func operate(sender: UIButton) {
+        if let result = brain.performOperation(sender.currentTitle!){
+            displayValue = result
         }
-        if(operandStack.count >= 2){
-            let op = sender.currentTitle!
-            var left = operandStack.removeLast()
-            var right = operandStack.removeLast()
-            var result = 0.0
-            if op == "+" {
-                result = left + right
-            }
-            else if op == "−" {
-                result = left - right
-            }
-            else if op == "×" {
-                result = left * right
-            }
-            else if op == "÷" {
-                if right != 0 {
-                    result = left / right
-                }
-            }
-        
-        operandStack.append(result)
-        display.text! = "\(result)"
+        else{
+            displayValue = 0
+        }
         clearDigit = true
-        }
     }
     
-    
-    var operandStack = Array<Double>()
     @IBAction func enter() {
-        operandStack.append(displayValue)
-        display.text! = "0"
         clearDigit = true
-
+        if let result = brain.pushOperand(displayValue){
+            displayValue = result
+        }
+        else{
+            //error message in the future
+            displayValue = 0
+        }
     }
     
     @IBAction func clearAll() {
         clearDigit = true
-        display.text! = "0"
-        operandStack.removeAll(keepCapacity: false)
-        
+        displayValue = 0
+        brain.clearMemory()
     }
     
 }
